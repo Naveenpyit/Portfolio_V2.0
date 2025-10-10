@@ -6,7 +6,8 @@ import Skills from './pages/skills'
 import Project from './pages/project'
 import Experience from './pages/experience'
 import Contact from './pages/contact'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Footer from './pages/footer'
+
 function App() {
   const sectionClass = 'min-h-screen flex items-center justify-center'
   return (
@@ -19,6 +20,7 @@ function App() {
         <section id='experience' className={sectionClass}><Experience /></section>
         <section id='projects' className={sectionClass}><Project /></section>
         <section id='contact' className={sectionClass}><Contact /></section>
+        <Footer />
       </div>
     </>
   )

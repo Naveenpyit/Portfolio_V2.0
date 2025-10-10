@@ -12,7 +12,7 @@ export default function useView(id) {
                 setIsVisible(entry.isIntersecting);
             })
         },
-            { threshold: 0.3 }
+            { threshold: 0.5 }
         )
         observer.observe(section);
         return () => observer.disconnect()

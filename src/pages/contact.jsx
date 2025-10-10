@@ -1,5 +1,6 @@
 import React from 'react'
-import { IoSendSharp } from "react-icons/io5";
+// import { IoSendSharp } from "react-icons/io5";
+import { IoIosSend } from "react-icons/io";
 import useView from '../customHook/useView';
 
 const contact = () => {
@@ -45,7 +46,7 @@ const contact = () => {
                         </div>
                     </div>
                     <div className='flex justify-center'>
-                        <button className='bg-green-400 p-2 rounded-md font-bold capitalize flex gap-x-2 items-center justify-center text-xl text-black'>send <IoSendSharp className='' /></button>
+                        <button className='font-semibold bg-pink-400 p-2 rounded-md flex gap-2 items-center text-xl capitalize'>send <IoIosSend className='' /></button>
                     </div>
                 </div>
 

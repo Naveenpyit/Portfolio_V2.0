@@ -14,6 +14,22 @@ const headers = () => {
             section.scrollIntoView({ behavior: 'smooth' })
         }
     }
+    useEffect(() => {
+        const section = navBars.map((id) => document.getElementById(id));
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActive(entry.target.id);
+                }
+            })
+        },
+            { threshold: 0.6 }
+        )
+        section.forEach((element) => {
+            if (element) observer.observe(element);
+        })
+        return () => observer.disconnect()
+    }, [])
 
     return (
         <>
@@ -22,7 +38,7 @@ const headers = () => {
                     <h2 className='text-3xl font-semibold hover:cursor-pointer duration-300 hover:scale-105'><span>Port<span className='text-base_clr'>folio</span></span></h2>
                 </div>
                 <div className='flex gap-x-16 text-xl justify-center items-center mt-1'>
-                    {navBars.map((a, i) => (<a key={i} onClick={() => ScrollToSection(a)} className={`capitalize font-semibold pb-1 ${active == a ? 'text-base_clr border-b-2 border-base_clr' : ' hover:text-base_clr cursor-pointer'} `}>{a}</a>))}
+                    {navBars.map((a, i) => (<a key={i} onClick={() => ScrollToSection(a)} className={`capitalize font-semibold pb-1 ${(active == a) ? 'text-base_clr border-b-2 border-base_clr' : ' hover:text-base_clr cursor-pointer'} `}>{a}</a>))}
                 </div>
                 <div className='flex gap-x-3 justify-start items-center mt-2 border-l-2 border-white px-10'>
                     <MdDarkMode className='text-4xl text-base_clr border-2 border-base_clr rounded-md cursor-pointer p-1' />
