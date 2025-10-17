@@ -11,6 +11,8 @@ import { SiAmazonapigateway } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiMysql } from "react-icons/si";
 import useView from '../customHook/useView';
+import { useSelector } from 'react-redux';
+import { getTheme } from '../store/changeTheme';
 
 const skillData = [
     {
@@ -23,7 +25,7 @@ const skillData = [
         ],
     },
     {
-        id: 2, logo: <FaServer />, role: "Backend Development", class: 'animate-slide_top',
+        id: 2, logo: <FaServer />, role: "Backend Development", class: 'animate-slide_top min-1000:animate-slide_rgt',
         language: [
             { name: "Python", icon: <IoLogoPython className="inline ml-2 text-blue-500 text-3xl" /> },
             { name: "Django", icon: <SiDjango className="inline ml-2 text-green-500 text-3xl" /> },
@@ -31,7 +33,7 @@ const skillData = [
         ],
     },
     {
-        id: 3, logo: <FaDatabase />, role: "Database Specialized", class: 'animate-slide_rgt',
+        id: 3, logo: <FaDatabase />, role: "Database Specialized", class: 'animate-slide_rgt min-1000:animate-slide_left',
         language: [
             { name: "Postgres", icon: <BiLogoPostgresql className="inline ml-2 text-blue-800 text-3xl" /> },
             { name: "MySQL", icon: <SiMysql className="inline ml-2 text-blue-300 text-3xl" /> },
@@ -41,16 +43,17 @@ const skillData = [
 
 const skills = () => {
     const isVisible = useView('skills');
+    const theme = useSelector(getTheme);
     return (
         <>
-            <div className='container mx-auto  p-3'>
-                <h1 className='text-5xl font-semibold text-center'>Skills Expertise</h1>
-                <div className={`mt-16 flex gap-x-10 `}>
-                    {skillData.map((a, i) => (<div key={a.id} className={`hover:scale-105 ${isVisible ? a.class : ''} hover:cursor-pointer duration-300 border border-base_clr w-full h-auto p-5 rounded-lg shadow-[0_0_20px_#00f6ff] bg-black mb-5`}>
-                        <p className='text-7xl text-base_clr font-bold '>{a.logo}</p>
-                        <p className='font-medium text-3xl mt-5 capitalize'>{a.role}</p>
+            <div className='container mx-auto p-3 min-1000:p-12 min-1000:mt-10'>
+                <h1 className='text-5xl font-semibold text-center '>Skills Expertise</h1>
+                <div className={`mt-16 flex min-1000:flex-col justify-center gap-x-10 min-1000:gap-y-10 `}>
+                    {skillData.map((a, i) => (<div key={a.id} className={`hover:scale-105 ${isVisible ? a.class : ''} hover:cursor-pointer duration-300 border ${theme == 'blue' ? 'border-base_clr shadow-[0_0_20px_#00f6ff]' : 'border-base_clr_1 shadow-[0_0_20px_#fa0c0c]'}  w-full h-auto min-1000:p-4 p-5 rounded-lg  bg-black mb-5`}>
+                        <p className={`text-7xl min-700:text-5xl ${theme == 'blue' ? 'text-base_clr' : 'text-base_clr_1'}  font-bold `}>{a.logo}</p>
+                        <p className='font-medium text-3xl min-700:text-2xl mt-5 capitalize'>{a.role}</p>
                         {a.language.map((b, i) => (<div key={i} className='mt-2 '>
-                            <p className='font-medium text-xl capitalize'>{b.name}{b.icon}</p>
+                            <p className='font-medium text-xl min-700:text-[17px] capitalize'>{b.name}{b.icon}</p>
                         </div>))}
                     </div>))}
                 </div>
