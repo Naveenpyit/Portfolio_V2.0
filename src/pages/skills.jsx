@@ -46,8 +46,8 @@ const skills = () => {
     const theme = useSelector(getTheme);
     return (
         <>
-            <div className='container mx-auto p-3 min-1000:p-12 min-1000:mt-10'>
-                <h1 className='text-5xl font-semibold text-center '>Skills Expertise</h1>
+            <div className='container mx-auto p-3 min-1000:p-12 min-1000:mt-5 min-1100:p-10'>
+                <h1 className='text-5xl min-600:text-4xl font-semibold text-center '>Skills Expertise</h1>
                 <div className={`mt-16 flex min-1000:flex-col justify-center gap-x-10 min-1000:gap-y-10 `}>
                     {skillData.map((a, i) => (<div key={a.id} className={`hover:scale-105 ${isVisible ? a.class : ''} hover:cursor-pointer duration-300 border ${theme == 'blue' ? 'border-base_clr shadow-[0_0_20px_#00f6ff]' : 'border-base_clr_1 shadow-[0_0_20px_#fa0c0c]'}  w-full h-auto min-1000:p-4 p-5 rounded-lg  bg-black mb-5`}>
                         <p className={`text-7xl min-700:text-5xl ${theme == 'blue' ? 'text-base_clr' : 'text-base_clr_1'}  font-bold `}>{a.logo}</p>

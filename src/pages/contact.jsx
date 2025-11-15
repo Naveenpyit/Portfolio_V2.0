@@ -14,8 +14,8 @@ const contact = () => {
     return (
         <>
             <div className='container mx-auto capitalize min-1000:p-12 mt-10'>
-                <h1 className='text-5xl font-semibold text-center'>contact me!</h1>
-                <p className={`text-center text-2xl font-medium mt-3 ${theme == 'blue' ? 'text-base_clr' : 'text-base_clr_1'} `}>I'm verify responsive to message</p>
+                <h1 className='text-5xl min-600:text-4xl font-semibold text-center'>contact me!</h1>
+                <p className={`text-center text-2xl min-600:text-xl font-medium mt-3 ${theme == 'blue' ? 'text-base_clr' : 'text-base_clr_1'} `}>I'm verify responsive to message</p>
                 <div className='flex flex-col mt-5 p-4 w-1/2 min-1100:w-full mx-auto gap-y-5'>
                     <div className='flex min-700:flex-col min-700:justify-center gap-x-5'>
                         <div className={`w-1/2 min-700:w-full flex flex-col gap-y-2 ${isVisible ? 'animate-slide_left' : ''} `}>

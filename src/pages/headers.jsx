@@ -12,8 +12,6 @@ const headers = () => {
     const [active, setActive] = useState('home');
     const theme = useSelector(getTheme);
     const dispatch = useDispatch();
-    console.log('~settheme~~~~', theme);
-    // const [theme, setTheme] = useState(false);
 
     const ScrollToSection = (element) => {
         const section = document.getElementById(element);
@@ -41,7 +39,7 @@ const headers = () => {
 
     return (
         <>
-            <div className={`sticky top-0 flex justify-evenly min-1100:justify-between items-center p-3 w-full z-50 ${theme == 'blue' ? 'bg-slate-800' : 'bg-black'} `}>
+            <div className={`sticky top-0 flex justify-evenly min-1100:justify-between items-center p-3 w-full transition-all duration-700 z-50 ${theme == 'blue' ? 'bg-slate-800' : 'bg-black'} `}>
                 <div className='flex justify-center items-center'>
                     <h2 className='text-3xl font-semibold hover:cursor-pointer duration-300 hover:scale-105'><span>Port<span className={`${theme == 'blue' ? 'text-base_clr' : 'text-base_clr_1'} `}>folio</span></span></h2>
                 </div>
@@ -50,7 +48,7 @@ const headers = () => {
                 </div>
                 <div className='flex gap-x-3 justify-start min-1100:justify-end items-center mt-2 border-l-2 border-white px-10 min-1000:px-2'>
                     {theme == 'blue' ? <BsSunFill onClick={() => dispatch(changeTheme())} className={`text-4xl  rounded-md cursor-pointer p-1 ${theme == 'blue' ? 'text-base_clr border-2 border-base_clr' : ''} `} /> : <MdDarkMode onClick={() => dispatch(changeTheme())} className={`text-4xl  rounded-md cursor-pointer p-1 ${theme == 'blue' ? 'text-base_clr border-2 border-base_clr' : 'text-base_clr_1 border-2 border-base_clr_1'}`} />}
-                    <button className={`font-bold ${theme == 'blue' ? 'bg-pink-400' : 'bg-green-400'}  p-2 rounded-md flex gap-2 items-center`}> <span className='min-700:hidden block'>Download CV</span>  <FaDownload className='text-[20px]' /></button>
+                    <a href='Naveenkumar M.pdf' download className={`font-bold ${theme == 'blue' ? 'bg-pink-400' : 'bg-green-400'}  p-2 rounded-md flex gap-2 items-center`}> <span className='min-700:hidden block'>Download CV</span>  <FaDownload className='text-[20px]' /></a>
                 </div>
             </div>
         </>

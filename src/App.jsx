@@ -15,7 +15,7 @@ function App() {
   const theme = useSelector(getTheme);
   return (
     <>
-      <div className={` ${theme == 'blue' ? 'bg-slate-800' : 'bg-black'}  text-white h-full `}>
+      <div className={` ${theme == 'blue' ? 'bg-slate-800' : 'bg-black'} transition-all duration-700  text-white h-full `}>
         <Headers />
         <section id='home' className={sectionClass}><Home /></section>
         <section id='aboutme' className={sectionClass}><Aboutme /></section>

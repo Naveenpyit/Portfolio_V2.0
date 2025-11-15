@@ -20,14 +20,14 @@ const project = () => {
     return (
         <>
             <div className='container mx-auto min-1000:p-10'>
-                <h1 className='capitalize text-5xl font-semibold text-center'>my recent work</h1>
+                <h1 className='capitalize text-5xl min-600:text-4xl font-semibold text-center'>my recent work</h1>
                 {projectData.map((a, i) => (<div key={i} className={`flex min-1100:flex-col justify-center gap-x-5 mt-8`} >
                     <div className={`${isVisible ? 'animate-slide_left' : ''} w-full flex flex-col gap-y-3`}>
                         <p className='text-3xl font-bold'>0{a.id}</p>
-                        <p className={`text-4xl ${theme == 'blue' ? 'text-base_clr' : 'text-base_clr_1'}  font-bold`}>{a.projectName}</p>
+                        <p className={`text-4xl  min-600:text-3xl ${theme == 'blue' ? 'text-base_clr' : 'text-base_clr_1'}  font-bold`}>{a.projectName}</p>
                         <div className={`bg-black p-4  flex flex-col gap-y-3 rounded-md border ${theme == 'blue' ? 'border-base_clr shadow-[0_0_20px_#00f6ff]' : 'border-base_clr_1 shadow-[0_0_20px_#fa0c0c]'} `}>
-                            <p className=' text-left text-xl font-semibold'>{a.description}</p>
-                            <p className={`${theme == 'blue' ? 'text-base_clr' : 'text-base_clr_1'} text-xl text-left font-medium`}>{a.language}</p>
+                            <p className=' text-left text-xl min-600:text-lg font-semibold'>{a.description}</p>
+                            <p className={`${theme == 'blue' ? 'text-base_clr' : 'text-base_clr_1'} text-xl min-600:text-lg text-left font-medium`}>{a.language}</p>
                             {a.url ? <span className='flex items-center mt-2 gap-x-2 font-bold animate-pulse'>Live Demo<a href={a.url} className=' '><FaArrowTrendUp className={`text-black text-4xl ${theme == 'blue' ? 'bg-base_clr' : 'bg-base_clr_1'}  rounded-full p-2`} /></a></span> : <span className='font-bold'>{a.status}</span>}
                         </div>
                     </div>

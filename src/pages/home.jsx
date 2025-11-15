@@ -51,17 +51,17 @@ const home = () => {
     }, [text, isDeleting, index]);
     return (
         <>
-            <div className='container mx-auto  flex flex-col gap-y-20 min-1100:gap-y-0'>
+            <div className='container mx-auto  flex flex-col gap-y-20 min-1100:gap-y-0 min-1100:p-10'>
                 <div className='flex min-1000:flex-col min-1100:mt-5 gap-5 w-full'>
-                    <div className={`w-1/2 min-1100:w-full min-700:p-5 flex justify-center ${isVisible ? 'animate-slide_left min-1100:animate-slide_bottom' : ''} h-auto mt-5`}>
-                        <img src="profile2.webp" alt="" className={`w-[430px] min-1000:w-[400px] min-800:w-[390px] min-800:h-[500px] min-1600:mt-10 min-1600:h-[650px] h-auto rounded-2xl  ${theme == 'blue' ? 'shadow-[0_0_60px_#00f6ff] border border-base_clr' : 'shadow-[0_0_60px_#fa0c0c] border border-base_clr_1'}   `} />
+                    <div className={`min-1100:p-5 w-1/2 min-1100:w-full min-700:p-5 flex justify-center ${isVisible ? 'animate-slide_left min-1100:animate-slide_bottom' : ''} h-auto mt-5`}>
+                        <img src="profile2.webp" alt="" className={`w-[430px] min-1000:w-[400px] min-800:w-[390px] min-800:h-[600px] min-1600:mt-10 min-1600:h-[650px] h-auto rounded-2xl  ${theme == 'blue' ? 'shadow-[0_0_60px_#00f6ff] border border-base_clr' : 'shadow-[0_0_60px_#fa0c0c] border border-base_clr_1'}   `} />
                     </div>
-                    <div className={`w-1/2 min-1100:w-full flex justify-start min-1100:justify-center p-16 gap-y-16 mt-12 ${isVisible ? 'animate-slide_rgt' : ''}`}>
+                    <div className={`w-1/2 min-1100:w-full flex justify-start min-1100:justify-center p-2 gap-y-16 mt-12 ${isVisible ? 'animate-slide_rgt' : ''}`}>
                         <div className='flex flex-col justify-center gap-y-2'>
-                            <p className='text-2xl font-bold '>Hello I'm</p>
-                            <h1 className='text-5xl font-semibold animate-slide_bottom'>Naveenkumar M</h1>
-                            <p className='text-2xl font-bold'>And I'm a <span className={`${theme == 'blue' ? 'text-base_clr' : 'text-base_clr_1'} `}>{text}</span><span className="blinking-cursor">|</span></p>
-                            <p className='text-lg font-semibold '>{objective}</p>
+                            <p className='text-2xl min-600:text-xl font-bold '>Hello I'm</p>
+                            <h1 className='text-5xl min-600:text-4xl font-semibold animate-slide_bottom'>Naveenkumar M</h1>
+                            <p className='text-2xl min-600:text-xl font-bold '>And I'm a <span className={`${theme == 'blue' ? 'text-base_clr' : 'text-base_clr_1'} `}>{text}</span><span className="blinking-cursor">|</span></p>
+                            <p className='text-lg min-600:text-md font-semibold '>{objective}</p>
                             <div className='flex gap-x-3 mt-2 p-1'>
                                 {social_media.map((a, i) => (<p key={i} className={`${theme == 'blue' ? 'bg-base_clr' : 'bg-base_clr_1'}  text-black text-4xl p-1 rounded-[5px] cursor-pointer duration-400 hover:scale-110`}>{a}</p>))}
                             </div>
@@ -73,7 +73,7 @@ const home = () => {
 
                     </div>
                 </div>
-                <div className={` grid grid-cols-4 min-1100:grid-cols-2 min-1100:gap-y-4 min-600:grid-cols-1  gap-x-5 ${isVisible ? 'animate-slide_bottom' : ''}`}>
+                <div className={` grid grid-cols-4 min-1100:grid-cols-2 min-1100:gap-y-4 min-500:grid-cols-1 min-1100:mt-10 gap-x-5 ${isVisible ? 'animate-slide_bottom' : ''}`}>
                     {profile_data.map((a) => (<div key={a.id} className='flex min-1100:justify-center min-1100:gap-y-4 gap-x-4 items-center p-2'>
                         <p className={`font-extrabold ${theme == 'blue' ? 'text-base_clr' : 'text-base_clr_1'}  text-5xl`}>{a.exp}</p>
                         <div className='flex flex-col'>
