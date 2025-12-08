@@ -16,7 +16,7 @@ import { getTheme } from '../store/changeTheme';
 
 const skillData = [
     {
-        id: 1, logo: '</>', role: "Frontend Development", class: 'animate-slide_left',
+        id: 1, logo: '</>', role: "Frontend Development", class: 'max-1100:animate-slide_left ',
         language: [
             { name: "React", icon: <FaReact className="inline ml-2 text-base_clr text-3xl" /> },
             { name: "HTML", icon: <IoLogoHtml5 className="inline ml-2 text-orange-700 text-3xl" /> },
@@ -25,7 +25,7 @@ const skillData = [
         ],
     },
     {
-        id: 2, logo: <FaServer />, role: "Backend Development", class: 'animate-slide_top min-1000:animate-slide_rgt',
+        id: 2, logo: <FaServer />, role: "Backend Development", class: 'max-1100:animate-slide_top ',
         language: [
             { name: "Python", icon: <IoLogoPython className="inline ml-2 text-blue-500 text-3xl" /> },
             { name: "Django", icon: <SiDjango className="inline ml-2 text-green-500 text-3xl" /> },
@@ -33,7 +33,7 @@ const skillData = [
         ],
     },
     {
-        id: 3, logo: <FaDatabase />, role: "Database Specialized", class: 'animate-slide_rgt min-1000:animate-slide_left',
+        id: 3, logo: <FaDatabase />, role: "Database Specialized", class: 'max-1100:animate-slide_rgt ',
         language: [
             { name: "Postgres", icon: <BiLogoPostgresql className="inline ml-2 text-blue-800 text-3xl" /> },
             { name: "MySQL", icon: <SiMysql className="inline ml-2 text-blue-300 text-3xl" /> },
@@ -46,7 +46,7 @@ const skills = () => {
     const theme = useSelector(getTheme);
     return (
         <>
-            <div className='container mx-auto p-3 min-1000:p-12 min-1000:mt-5 min-1100:p-10'>
+            <div className='container mx-auto p-3 min-1000:p-12 min-1000:mt-5 min-1100:p-2 min-700:p-7'>
                 <h1 className='text-5xl min-600:text-4xl font-semibold text-center '>Skills Expertise</h1>
                 <div className={`mt-16 flex min-1000:flex-col justify-center gap-x-10 min-1000:gap-y-10 `}>
                     {skillData.map((a, i) => (<div key={a.id} className={`hover:scale-105 ${isVisible ? a.class : ''} hover:cursor-pointer duration-300 border ${theme == 'blue' ? 'border-base_clr shadow-[0_0_20px_#00f6ff]' : 'border-base_clr_1 shadow-[0_0_20px_#fa0c0c]'}  w-full h-auto min-1000:p-4 p-5 rounded-lg  bg-black mb-5`}>

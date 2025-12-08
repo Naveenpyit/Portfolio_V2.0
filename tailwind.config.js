@@ -34,10 +34,10 @@ module.exports = {
       },
       animation: {
         moveRotate: 'moveRotate 5s linear infinite',
-        slide_rgt: 'slideRightToLeft 1s ease-in forwards',
-        slide_left: 'slideLeftToRight 0.9s ease-in forwards',
-        slide_bottom: 'slideTopToBottom 1s ease-in forwards',
-        slide_top: 'slideBottomToTop 1s ease-in forwards',
+        slide_rgt: 'slideRightToLeft 1.2s ease-in forwards',
+        slide_left: 'slideLeftToRight 1.2s ease-in forwards',
+        slide_bottom: 'slideTopToBottom 1.2s ease-in forwards',
+        slide_top: 'slideBottomToTop 1.2s ease-in forwards',
         fade_in: 'fade_in 1s ease-out forwards',
       },
       fontFamily: {
@@ -74,6 +74,7 @@ module.exports = {
         'min-550': { max: '550px' },
         'min-500': { max: '500px' },
         'min-450': { max: '450px' },
+        'max-1100': { min: '1100px' },
       },
     },
   },

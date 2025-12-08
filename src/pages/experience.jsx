@@ -9,7 +9,7 @@ const experience = () => {
     const backEnd = 'I am a backend developer experienced in building robust and scalable RESTful APIs using Django REST Framework (DRF). I specialize in designing clean database structures, implementing secure authentication systems, and integrating APIs with frontend applications for seamless communication. With expertise in PostgreSQL, ORM queries, and environment-based configurations, I ensure performance-optimized and secure backend solutions. I also have experience in JWT authentication, role-based access control, and third-party API integrations, enabling me to develop efficient systems that are production-ready and easy to maintain.'
     return (
         <>
-            <div className='container mx-auto flex flex-col justify-center min-1100:p-10'>
+            <div className='container mx-auto flex flex-col justify-center min-1100:p-10 min-700:p-7'>
                 <h1 className='text-center text-5xl min-600:text-4xl  font-semibold'>Experience</h1>
                 <div className={`bg-black border ${theme == 'blue' ? 'border-base_clr shadow-[0_0_20px_#00f6ff]' : 'border-base_clr_1 shadow-[0_0_20px_#fa0c0c]'}  p-4  rounded-md capitalize mt-10 w-full mx-auto flex flex-col justify-center gap-y-2`}>
                     <div className='flex flex-col justify-center w-auto gap-y-1'>

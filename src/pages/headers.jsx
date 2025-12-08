@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { FaDownload } from "react-icons/fa6";
 import { MdDarkMode } from "react-icons/md";
 import { BsSunFill } from "react-icons/bs";
-import { MdOutlineDarkMode } from "react-icons/md";
-import { LuMenu } from "react-icons/lu";
 import { useDispatch, useSelector } from 'react-redux';
 import { changeTheme, getTheme } from '../store/changeTheme';
 
@@ -16,10 +14,11 @@ const headers = () => {
     const ScrollToSection = (element) => {
         const section = document.getElementById(element);
         if (section) {
-            setActive(element)
+            setActive(element);
             section.scrollIntoView({ behavior: 'smooth' })
         }
     }
+
     useEffect(() => {
         const section = navBars.map((id) => document.getElementById(id));
         const observer = new IntersectionObserver((entries) => {

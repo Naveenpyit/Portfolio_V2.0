@@ -11,10 +11,10 @@ const footer = () => {
     const theme = useSelector(getTheme);
     return (
         <>
-            <div className='bg-black p-4'>
+            <div className={`${theme == 'blue' ? 'bg-black' : ''} transtition-all duration-700 p-4`}>
                 <div className='flex flex-col justify-center items-center gap-y-4 p-2'>
                     <div className='flex gap-x-4'>
-                        <a className={`p-1 rounded-full border-2 ${theme == 'blue' ? 'border-base_clr shadow-[0_0_10px_#00f6ff]' : 'border-base_clr_1 shadow-[0_0_10px_#fa0c0c]'} hover:cursor-pointer hover:scale-105`}><FaGithub className={`text-4xl ${theme == 'blue' ? 'text-base_clr' : 'text-base_clr_1'}  p-1  `} /></a>
+                        <a href='https://github.com/Naveenpyit' className={`p-1 rounded-full border-2 ${theme == 'blue' ? 'border-base_clr shadow-[0_0_10px_#00f6ff]' : 'border-base_clr_1 shadow-[0_0_10px_#fa0c0c]'} hover:cursor-pointer hover:scale-105`}><FaGithub className={`text-4xl ${theme == 'blue' ? 'text-base_clr' : 'text-base_clr_1'}  p-1  `} /></a>
                         <a className={`p-1 rounded-full border-2 ${theme == 'blue' ? 'border-base_clr shadow-[0_0_10px_#00f6ff]' : 'border-base_clr_1 shadow-[0_0_10px_#fa0c0c]'} hover:cursor-pointer hover:scale-105`}><FaLinkedin className={`text-4xl ${theme == 'blue' ? 'text-base_clr' : 'text-base_clr_1'}  p-1  `} /></a>
                     </div>
                     <div className='flex gap-x-3'>

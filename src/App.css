@@ -1,0 +1,4 @@
+.animation-once {
+    animation-iteration-count: 1 !important;
+    animation-fill-mode: forwards !important;
+}
