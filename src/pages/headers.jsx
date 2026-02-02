@@ -47,7 +47,7 @@ const headers = () => {
                 </div>
                 <div className='flex gap-x-3 justify-start min-1100:justify-end items-center mt-2 border-l-2 border-white px-10 min-1000:px-2'>
                     {theme == 'blue' ? <BsSunFill onClick={() => dispatch(changeTheme())} className={`text-4xl  rounded-md cursor-pointer p-1 ${theme == 'blue' ? 'text-base_clr border-2 border-base_clr' : ''} `} /> : <MdDarkMode onClick={() => dispatch(changeTheme())} className={`text-4xl  rounded-md cursor-pointer p-1 ${theme == 'blue' ? 'text-base_clr border-2 border-base_clr' : 'text-base_clr_1 border-2 border-base_clr_1'}`} />}
-                    <a href='Naveenkumar M.pdf' download className={`font-bold ${theme == 'blue' ? 'bg-pink-400' : 'bg-green-400'}  p-2 rounded-md flex gap-2 items-center`}> <span className='min-700:hidden block'>Download CV</span>  <FaDownload className='text-[20px]' /></a>
+                    <a href='NaveenResume.pdf' download className={`font-bold ${theme == 'blue' ? 'bg-pink-400' : 'bg-green-400'}  p-2 rounded-md flex gap-2 items-center`}> <span className='min-700:hidden block'>Download CV</span>  <FaDownload className='text-[20px]' /></a>
                 </div>
             </div>
         </>

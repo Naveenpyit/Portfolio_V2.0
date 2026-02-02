@@ -8,7 +8,7 @@ import { getTheme } from '../store/changeTheme';
 
 const roleData = ['Full Stack Developer.', 'Backend Developer.', 'Web Developer.', 'Frontend Developer.']
 const profile_data = [
-    { id: 1, exp: '1+', category: 'Year of', status: 'Experience' },
+    { id: 1, exp: '1.5+', category: 'Year of', status: 'Experience' },
     { id: 2, exp: '5+', category: 'Projects', status: 'Completed' },
     { id: 3, exp: '6+', category: 'Technologies', status: 'known' },
     { id: 4, exp: '2+', category: 'Framework', status: 'Specialaized' },

@@ -15,24 +15,26 @@ const contact = () => {
     const inputClass = `bg-black border ${theme == 'blue' ? 'border-base_clr shadow-[0_0_10px_#00f6ff]' : 'border-base_clr_1 shadow-[0_0_10px_#fa0c0c]'} outline-none p-3 rounded-md font-medium text-lg`
 
     const handleSubmitEmail = async (data) => {
-        if (data) {
+        if (data?.cmp_name != '' && data?.name != '' && data?.email != '' && data?.subject != '' && data?.mobile != '' && data?.content != '') {
             const response = await axios.post('https://formspree.io/f/xvgebave', data);
             if (response?.status == 200) {
                 alert('Email Sent Successfully!');
             } else {
                 alert('Email Sent Failed!');
             }
+        } else {
+            alert('Please fill the details')
         }
     }
 
     const hanldeWhatsApp = async (data) => {
         const phone = '919360610830';
         const message = `
-            Name    ${data?.name},
-            Company ${data?.cmp_name},
-            Email   ${data?.email},
-            Mobile  ${data?.mobile},
-            Content ${data?.content}.`;
+            Name    :${data?.name},
+            Company :${data?.cmp_name},
+            Email   :${data?.email},
+            Mobile  :${data?.mobile},
+            Content :${data?.content}.`;
         // const message = `
         //     👤 ${data?.name},
         //     🏢 ${data?.cmp_name},
@@ -67,7 +69,7 @@ const contact = () => {
                             </div>
                             <div className={`w-1/2 min-700:w-full flex flex-col gap-y-2 transition-all duration-700 ${isVisible ? 'max-1100:animate-slide_rgt' : ''} `}>
                                 <label htmlFor="mobile" className={lableClass}>mobile <span className='text-red-500 text-xl'>*</span></label>
-                                <input className={inputClass} maxLength={10} type="text" {...register('mobile')} id="" />
+                                <input className={inputClass} maxLength={10} type="text" inputMode='numeric' onChange={(e) => e.target.value = e.target.value.replace(/\D/g, '')} {...register('mobile')} id="" />
                             </div>
                         </div>
                         <div>
@@ -79,7 +81,7 @@ const contact = () => {
                         <div>
                             <div className={`flex flex-col gap-y-2 transition-all duration-700 ${isVisible ? 'max-1100:animate-slide_rgt' : ''} `}>
                                 <label htmlFor="content" className={lableClass}>content <span className='text-red-500 text-xl'>*</span></label>
-                                <textarea {...register('content')} id="" className={`h-[120px] ${inputClass}`}></textarea>
+                                <textarea {...register('content')} id="" className={`h-[120px] resize-none ${inputClass}`}></textarea>
                             </div>
                         </div>
                         <div className='flex justify-center gap-x-5'>

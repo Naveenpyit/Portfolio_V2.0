@@ -13,7 +13,7 @@ const projectData = [
     },
     {
         id: 2, projectName: 'Bullion Application', img: 'goldbullion.jpg', description: 'Worked as a Full Stack Developer using Django REST API to fetch live Gold, Silver, and INR rates, and built the frontend using React.js and Tailwind CSS to display the live rates.Created reusable UI components to display gold, silver, and forex data in a visually appealing format.Integrated role-based access and authentication for secure dashboard usage,Ensured mobile-friendly design with Tailwind CSS responsive utilities. ',
-        language: 'Django Framework,Tailwind CSS,Python and Rest Api', url: 'http://www.shivamtraders.online/'
+        language: 'React JS,Tailwind CSS,Django Framework,Python and Rest Api', url: 'http://www.shivamtraders.online/'
     },
     {
         id: 3, projectName: 'FootCourt Application', img: 'footcourtimg.jpg', description: 'Worked as a backend developer in building a Food Court Management application that supports ordering, billing, vendor management, and real-time updates. Designed and developed scalable REST APIs using Django REST Framework with PostgreSQL as the primary database.Developed and optimized backend APIs for menu management, order processing, and user authentication, Ensured smooth communication between React frontend and backend API endpoints,Achieved faster API response times with optimized queries.',
@@ -22,6 +22,10 @@ const projectData = [
     {
         id: 4, projectName: 'The Process', img: 'process.png', description: 'Worked as a backend developer in building a The Process application that supports internal data hierarichy products, Designed and developed scalable REST APIs using Django REST Framework with PostgreSQL as the primary database.Developed and optimized backend APIs for role management,  and user authentication,Achieved faster API response times with optimized queries.',
         language: 'Django Framework,Python and Rest Api', status: "Backend Api's"
+    },
+    {
+        id: 5, projectName: 'The Process', img: 'marketplace.jpg', description: 'Worked as a Full Stack developer in building a The Market Place application that supports internal data hierarichy products, Designed and developed scalable REST APIs using Django REST Framework with Oracle as the primary database.Data managed by the frontend Redux State, Api calls using RTK query!',
+        language: 'React JS,Tailwind CSS,Django Framework,Python and Rest Api', url: "http://marketplace.thescmsilk.com/"
     },
 ]
 
